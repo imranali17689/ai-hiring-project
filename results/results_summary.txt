@@ -1,0 +1,27 @@
+AI Hiring Fairness Project - Results Summary
+================================================
+
+Dataset: Adult.csv
+Raw rows: 30162
+Rows after dropna for needed columns: 30162
+Target column: class
+Gender column: sex
+Feature columns: ['age', 'education_num', 'hours_per_week']
+
+Baseline model (DecisionTreeClassifier, max_depth=3)
+------------------------------------------------
+Accuracy: 0.7848
+Male selection rate:   0.1217
+Female selection rate: 0.0550
+
+Fairness-adjusted model (simple demo)
+------------------------------------------------
+Favored group: Male
+Reduction fraction: 0.2
+Reduced favored positives: 150
+Accuracy: 0.7745
+Male selection rate:   0.0973
+Female selection rate: 0.0550
+
+Plot saved to: results/selection_rate_comparison.png
+Summary saved to: results/results_summary.txt
